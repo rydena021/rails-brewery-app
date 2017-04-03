@@ -1,0 +1,12 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= @brewery.image_url %>');">
+  <div class="banner-content">
+    <h1><%= @brewery.name %></h1>
+    <h4><%= @brewery.address %></h4>
+    <p><%= @brewery.description %></p>
+<%= link_to "Back", root_path, {class: "btn btn-primary btn-lg"} %>
+<%= link_to "Edit", edit_brewery_path(@brewery), {class: "btn btn-primary btn-lg"} %>
+<%= link_to "Delete", brewery_path(@brewery), class: "btn btn-primary btn-lg", method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
+
+

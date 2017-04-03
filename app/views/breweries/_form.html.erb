@@ -1,0 +1,7 @@
+<%= simple_form_for @brewery do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :image_url, label: 'Image URL' %>
+  <%= f.button :submit %>
+<% end %>
