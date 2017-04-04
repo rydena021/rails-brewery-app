@@ -1,19 +1,22 @@
 <%= render 'banner' %>
 <div class="container padded">
-  <% @brewery.reviews.each do |r| %>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <% r.rating.times do %>
-        <i class="fa fa-star"></i>
-      <% end %>
-      <p><%= r.comment %></p>
-    </div>
-  </div>
-  <% end %>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <%= render 'review_form' %>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <h2>Reviews</h2>
+      <% @brewery.reviews.each do |r| %>
+        <% r.rating.times do %>
+          <i class="fa fa-star"></i>
+        <% end %>
+        <p><%= r.comment %></p>
+      <% end %>
     </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <%= render 'reviews/form' %>
+    </div>
+  </div>
+
 </div>

@@ -1,5 +1,4 @@
 class BreweriesController < ApplicationController
-
   before_action :find_brewery, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -43,7 +42,7 @@ class BreweriesController < ApplicationController
   private
 
   def brewery_params
-    params.require(:brewery).permit(:name, :address, :description, :image_url)
+    params.require(:brewery).permit(:name, :address, :description, :photo)
   end
 
   def find_brewery

@@ -5,5 +5,6 @@
     <h2><%= brewery.name %></h2>
     <p><%= brewery.address %></p>
   </div>
+  <%= image_tag brewery.image_url, {class: "card-logo avatar-large"} %>
   <%= link_to "", brewery_path(brewery), {class: "card-link"} %>
 </div>

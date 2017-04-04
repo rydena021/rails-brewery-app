@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :breweries do
     resources :reviews, only: [:create]
   end
-
   root to: 'breweries#index'
+
+  mount Attachinary::Engine => "/attachinary"
 end
