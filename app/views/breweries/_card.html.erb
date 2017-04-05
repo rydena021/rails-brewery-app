@@ -1,9 +1,7 @@
-<div class="card" style="background-color:grey">
-<!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= brewery.image_url %>');"> -->
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path brewery.photo.path %>')">
   <div class="card-category">Popular</div>
   <div class="card-description">
     <h2><%= brewery.name %></h2>
-    <p><%= brewery.address %></p>
   </div>
   <%= link_to "", brewery_path(brewery), {class: "card-link"} %>
 </div>

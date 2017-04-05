@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Attachinary::Engine => "/attachinary"
+
   devise_for :users
 
   resources :breweries do
@@ -6,5 +8,4 @@ Rails.application.routes.draw do
   end
   root to: 'breweries#index'
 
-  mount Attachinary::Engine => "/attachinary"
 end
